@@ -15,6 +15,7 @@ class BSTree {
 	
 	bool find(T data) {
 		// TODO (also recursive version)
+		return find(root, data);
 	}
 	
 	T* get(T data) {
@@ -27,10 +28,9 @@ class BSTree {
 	}
 	
 	void printReverseOrder() {
-		// TODO (also recursive version)
+		printReverseOrder(root);
 	}
 	
-	// INSERT 
 	void insert(T newData) {
 		insert(root, newData);
 	}
@@ -60,8 +60,20 @@ class BSTree {
         rightChild = nullptr;
       }
     } *root;
+
+	bool find(Node* n, T data) {
+		// TODO (also recursive version)
+		if (n == nullptr){
+			return false;
+		} else if (data == n->data) {
+			return true;
+		} else if (data < n->data) {
+			return find(n->leftChild, data);
+		} else if (data > n->data) {
+			return find(n->rightChild, data);
+		} 
+	}
 	
-	// RECURSIVE INSERT 
 	void insert(Node*& n, T newData) {
 		if (n == nullptr) {
 			n = new Node(newData);
@@ -82,4 +94,12 @@ class BSTree {
 			printInOrder(n->rightChild);
 		}
 	}
+	
+	void printReverseOrder(Node* n) {
+			if (n != nullptr) {
+				printInOrder(n->rightChild);
+				cout << n->data << ' ';
+				printInOrder(n->leftChild);
+			}
+		}
 };
