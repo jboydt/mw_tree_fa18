@@ -40,6 +40,7 @@ TEST_CASE ("BSTree<string> constructor") {
   tree.insert("orange");
 
   tree.printInOrder();
+  tree.printReverseOrder();
 
   CHECK(tree.find("apple") == true);
   CHECK(tree.find("grape") == false);
