@@ -60,7 +60,16 @@ class BSTree {
     } *root;
 
   T* get(Node* n, T data) {
-    // TODO
+
+   if (n == nullptr){
+     return nullptr;
+   }else if (data == n->data){
+     return &data;
+   }else if (data < n->data){
+     return get(n->leftChild, data);
+   } else if (data > n->data){
+     return get(n->rightChild, data);
+   }
   }
 
   void clear(Node*& n) {
