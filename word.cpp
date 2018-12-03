@@ -35,10 +35,10 @@
 		return this -> word == otherWord.word;
 	}
 	
-	friend ostream& operator<<(ostream& outs, const Word& otherWord) 
+	friend ostream& operator<<(ostream& outs, const Word& w) 
 	{
 		
-		outs << otherWord.word;
+		outs << w.word;
 		return outs;
 	}
 	
