@@ -6,19 +6,19 @@ Word::Word(string newWord) {
 }
 
 string Word::getWord() {
-  // TODO
+  return word;
 }
 
 unsigned int Word::getCount() {
-  // TODO
+  return count;
 }
 
 void Word::setWord(string newWord) {
-  // TODO
+  string = newWord;
 }
 
 void Word::incrementCount(unsigned int amount) {
-  // TODO
+  count += amount;
 }
 
 // operator>
