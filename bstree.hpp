@@ -12,40 +12,38 @@ class BSTree {
       numNodes = 0;
       root = nullptr;
     }
-	
-	bool find(T data) {
-		// TODO (also recursive version)
-		return find(root, data);
-	}
-	
-	T* get(T data) {
-		// TODO  (also recursive version)
-	}
-	
-	bool remove(T data) {
-		// TODO (also recursive version)
-		// this one is hard
-	}
-	
-	void printReverseOrder() {
-		printReverseOrder(root);
-	}
-	
-	void insert(T newData) {
-		insert(root, newData);
-	}
+
+    void clear() {
+      clear(root);
+    }
+
+  	bool find(T data) {
+  		return find(root, data);
+  	}
+
+  	T* get(T data) {
+  		return get(root, data);
+  	}
+
+  	bool remove(T data) {
+  		return remove(root, data);
+  	}
+
+  	void printReverseOrder() {
+  		printReverseOrder(root);
+  	}
+
+  	void insert(T newData) {
+  		insert(root, newData);
+  	}
 
     unsigned int getNumNodes() {
       return numNodes;
     }
-	
-	void printInOrder() {
-		printInOrder(root);
-	}
 
-    string toString() {
-      return string("");
-    }
+  	void printInOrder() {
+  		printInOrder(root);
+  	}
 
   private:
     unsigned int numNodes;
@@ -61,6 +59,18 @@ class BSTree {
       }
     } *root;
 
+  T* get(Node* n, T data) {
+    // TODO
+  }
+
+  void clear(Node*& n) {
+    // TODO
+  }
+
+  bool remove(Node*& n, T& data) {
+    // TODO
+  }
+
 	bool find(Node* n, T data) {
 		// TODO (also recursive version)
 		if (n == nullptr){
@@ -71,9 +81,9 @@ class BSTree {
 			return find(n->leftChild, data);
 		} else if (data > n->data) {
 			return find(n->rightChild, data);
-		} 
+		}
 	}
-	
+
 	void insert(Node*& n, T newData) {
 		if (n == nullptr) {
 			n = new Node(newData);
@@ -86,7 +96,7 @@ class BSTree {
 			// do nothing
 		}
 	}
-	
+
 	void printInOrder(Node* n) {
 		if (n != nullptr) {
 			printInOrder(n->leftChild);
@@ -94,7 +104,7 @@ class BSTree {
 			printInOrder(n->rightChild);
 		}
 	}
-	
+
 	void printReverseOrder(Node* n) {
 			if (n != nullptr) {
 				printInOrder(n->rightChild);
