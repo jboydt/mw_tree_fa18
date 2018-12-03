@@ -42,6 +42,13 @@
 		return outs;
 	}
 	
+	friend ostream& operator>>(ostream& outs, const Word& w) 
+	{
+		
+		outs >> w.word;
+		return outs;
+	}
+	
 	string uppercase(string s) 
 	{
 	
