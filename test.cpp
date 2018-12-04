@@ -7,13 +7,13 @@
 #include <string>
 using std::string;
 
-TEST_CASE("BSTree<Word>") {
+/*TEST_CASE("BSTree<Word>") {
   BSTree<Word> tree;
 
   tree.insert(Word("apple"));
   tree.insert(Word("banana"));
   tree.insert(Word("cherry"));
-}
+}*/
 
 TEST_CASE ("BSTree<int> constructor") {
   BSTree<int> tree;
@@ -42,6 +42,13 @@ TEST_CASE ("BSTree<string> constructor") {
   tree.printInOrder();
   tree.printReverseOrder();
 
-  CHECK(tree.find("apple") == true);
-  CHECK(tree.find("grape") == false);
+  //CHECK(tree.find("apple") == true);
+  //CHECK(tree.find("grape") == false);
+}
+
+TEST_CASE ("Word<string> constructor") {
+  Word<string> word;
+
+  CHECK(word.getWord() == " ");
+  CHECK(word.getCount() == 1);
 }

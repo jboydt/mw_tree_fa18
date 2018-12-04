@@ -3,21 +3,20 @@
 
 	string Word::getWord() 
 	{
-		
+		return word;
 	}
 	unsigned int Word ::getCount() 
 	{
-		
-		
+		return count;
 	}
 	
 	void Word ::setWord(string newWord) 
 	{
-		
+		word = newWord;
 	}
 	void Word ::incrementCount(unsigned int amount) 
 	{
-		
+		count += amount;
 	}
 	
 	bool Word ::operator> (const Word& otherWord) 
