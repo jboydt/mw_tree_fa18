@@ -1,12 +1,15 @@
 #pragma once
 
+#include <algorithm>
 #include <string>
 #include <iostream>
 using std::string;
+using std::istream;
 using std::ostream;
 
 class Word {
 public:
+  Word();
   Word(string newWord);
 
   // TODO
@@ -28,6 +31,9 @@ public:
 
   // operator<<
   friend ostream& operator<<(ostream& outs, const Word& w);
+
+  // operator>>
+  friend istream& operator>>(istream& ins, Word& w);
 
 private:
   string word;
