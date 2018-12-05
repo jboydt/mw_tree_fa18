@@ -105,19 +105,30 @@ class BSTree {
         count--;
         return true;
       } else if (n->leftChild == nullptr) {
-        n = n->rightChild;
-        delete n;
+        Node* temp = n;
+        n = temp->rightChild;
+        delete temp;
         count--;
         return true;
       } else if (n->rightChild == nullptr) {
-        n = n->leftChild;
-        delete n;
+        removeMax(n->leftChild, n->data);
         count--;
         return true;
       } else {
         count--;
         return true;
       }
+    }
+  }
+
+  void removeMax(Node*& root_ptr, T& removed) {
+    if (root_ptr->rightChild = nullptr) {
+      Node* temp = root_ptr;
+      removed = root_ptr->data;
+      root_ptr = root_ptr->leftChild;
+      delete temp;
+    } else {
+      removeMax(root_ptr->rightChild, root_ptr->data);
     }
   }
 
