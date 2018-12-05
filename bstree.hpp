@@ -13,8 +13,21 @@ class BSTree {
       root = nullptr;
     }
 
+    // Maybe Needed??
+    ~BSTree() {
+      // TO DO??
+    }
+
     void clear() {
       clear(root);
+    }
+
+    // Maybe Needed??
+    bool empty() {
+      if (size == 0) {
+        return true;
+      }
+      return false;
     }
 
   	bool find(T data) {
@@ -73,7 +86,9 @@ class BSTree {
   }
 
   void clear(Node*& n) {
-    // TODO
+    while(!empty()) {
+      remove(n);
+    }
   }
 
   bool remove(Node*& n, T& data) {
