@@ -102,20 +102,16 @@ class BSTree {
       if (n->leftChild == nullptr && n->rightChild == nullptr) {
         n = nullptr;
         delete n;
-        count--;
         return true;
       } else if (n->leftChild == nullptr) {
         Node* temp = n;
         n = temp->rightChild;
         delete temp;
-        count--;
         return true;
       } else if (n->rightChild == nullptr) {
         removeMax(n->leftChild, n->data);
-        count--;
         return true;
       } else {
-        count--;
         return true;
       }
     }

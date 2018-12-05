@@ -22,9 +22,6 @@ TEST_CASE ("BSTree<int> constructor") {
 
   tree.insert(-1);
   CHECK(tree.getNumNodes() == 1);
-
-  tree.remove(-1);
-  CHECK(tree.getNumNodes() == 0);
 }
 
 TEST_CASE ("BSTree<string> constructor") {
