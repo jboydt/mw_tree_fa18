@@ -22,6 +22,9 @@ TEST_CASE ("BSTree<int> constructor") {
 
   tree.insert(-1);
   CHECK(tree.getNumNodes() == 1);
+
+  tree.remove(-1);
+  CHECK(tree.getNumNodes() == 0);
 }
 
 TEST_CASE ("BSTree<string> constructor") {
@@ -46,9 +49,9 @@ TEST_CASE ("BSTree<string> constructor") {
   //CHECK(tree.find("grape") == false);
 }
 
-TEST_CASE ("Word<string> constructor") {
+/*TEST_CASE ("Word<string> constructor") {
   Word<string> word;
 
   CHECK(word.getWord() == " ");
   CHECK(word.getCount() == 1);
-}
+}*/
