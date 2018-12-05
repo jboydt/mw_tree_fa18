@@ -84,7 +84,7 @@ class BSTree {
      return get(n->rightChild, data);
    }
   }
-
+  // Possibly implemented wrong
   void clear(Node*& n) {
     while(!empty()) {
       remove(n);
