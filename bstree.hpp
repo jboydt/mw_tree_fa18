@@ -92,7 +92,33 @@ class BSTree {
   }
 
   bool remove(Node*& n, T& data) {
-    // TODO
+    if (n == nullptr) {
+      return false;
+    } else if (n->data < data) {
+      return remove(data, n->rightChild);
+    } else if (n->data > data) {
+      return remove(data, n->leftChild);
+    } else {
+      if (n->leftChild == nullptr && n->rightChild == nullptr) {
+        n = nullptr;
+        delete n;
+        count--;
+        return true;
+      } else if (n->leftChild == nullptr) {
+        n = n->rightChild;
+        delete n;
+        count--;
+        return true;
+      } else if (n->rightChild == nullptr) {
+        n = n->leftChild;
+        delete n;
+        count--;
+        return true;
+      } else {
+        count--;
+        return true;
+      }
+    }
   }
 
 	bool find(Node* n, T data) {
