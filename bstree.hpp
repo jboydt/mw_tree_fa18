@@ -41,6 +41,10 @@ class BSTree {
   	bool remove(T data) {
   		return remove(root, data);
   	}
+	
+	void removeMax() {
+		return remove(root, data);
+	}
 
   	void printReverseOrder() {
   		printReverseOrder(root);
@@ -102,22 +106,29 @@ class BSTree {
       if (n->leftChild == nullptr && n->rightChild == nullptr) {
         n = nullptr;
         delete n;
-        count--;
         return true;
       } else if (n->leftChild == nullptr) {
-        n = n->rightChild;
-        delete n;
-        count--;
+        Node* temp = n;
+        n = temp->rightChild;
+        delete temp;
         return true;
       } else if (n->rightChild == nullptr) {
-        n = n->leftChild;
-        delete n;
-        count--;
+        removeMax(n->leftChild, n->data);
         return true;
       } else {
-        count--;
         return true;
       }
+    }
+  }
+
+  void removeMax(Node*& root_ptr, T& removed) {
+    if (root_ptr->rightChild = nullptr) {
+      Node* temp = root_ptr;
+      removed = root_ptr->data;
+      root_ptr = root_ptr->leftChild;
+      delete temp;
+    } else {
+      removeMax(root_ptr->rightChild, root_ptr->data);
     }
   }
 
