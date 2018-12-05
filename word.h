@@ -12,7 +12,7 @@ public:
   Word();
   Word(string newWord);
 
-  // TODO
+  
   // getters and setters
   string getWord();
   unsigned int getCount();
