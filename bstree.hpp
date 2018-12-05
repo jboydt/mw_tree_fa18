@@ -24,7 +24,7 @@ class BSTree {
 
     // Maybe Needed??
     bool empty() {
-      if (size == 0) {
+      if (numNodes == 0) {
         return true;
       }
       return false;
