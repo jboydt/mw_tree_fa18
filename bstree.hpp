@@ -88,10 +88,16 @@ class BSTree {
      return get(n->rightChild, data);
    }
   }
-  // Possibly implemented wrong
+  
   void clear(Node*& n) {
-    while(!empty()) {
-      remove(n);
+    if(n != nullptr) {
+      if(n->leftChild != nullptr)
+        clear(n->leftChild);
+      if(n->rightChild != nullptr)
+        clear(n->rightChild);
+      delete n;
+      n = nullptr;
+      numNodes--;
     }
   }
 
