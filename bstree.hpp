@@ -77,76 +77,74 @@ class BSTree {
       }
     } *root;
 
-  T* get(Node* n, T data) {
-
-   if (n == nullptr){
-     return nullptr;
-   }else if (data == n->data){
-     return &(n->data);
-   }else if (data < n->data){
-     return get(n->leftChild, data);
-   } else if (data > n->data){
-     return get(n->rightChild, data);
-   }
-  }
-
-  void clear(Node*& n) {
-    if(n != nullptr) {
-      if(n->leftChild != nullptr)
-        clear(n->leftChild);
-      if(n->rightChild != nullptr)
-        clear(n->rightChild);
-      delete n;
-      n = nullptr;
-      numNodes--;
-    }
-  }
-
-  bool remove(Node*& n, T& data) {
-    if (n == nullptr) {
-      return false;
-    } else if (n->data < data) {
-      return remove(n->rightChild, data);
-    } else if (n->data > data) {
-      return remove(n->leftChild, data);
-    } else {
-      if (n->leftChild == nullptr) {//&& n->rightChild == nullptr) {
-        Node* temp = n;
-        n = temp->rightChild;
-        delete temp;
-        numNodes--;
-        return true;
-      } else {
-        removeMax(n->leftChild, n->data);
-        numNodes--;
-        return true;
-      }
-    }
-  }
-
-  void removeMax(Node*& root_ptr, T& removed) {
-    if (root_ptr->rightChild == nullptr) {
-      Node* temp = root_ptr;
-      removed = root_ptr->data;
-      root_ptr = root_ptr->leftChild;
-      delete temp;
-    } else {
-      removeMax(root_ptr->rightChild, root_ptr->data);
-    }
-  }
-
-  bool find(Node* n, T data) {
-     // TODO (also recursive version)
-	if (n == nullptr){
-		return false;
-	} else if (data == n->data) {
-		return true;
-	} else if (data < n->data) {
-		return find(n->leftChild, data);
-	} else if (data > n->data) {
-		return find(n->rightChild, data);
+	T* get(Node* n, T data) {
+		if (n == nullptr){
+			return nullptr;
+		} else if (data == n->data) {
+			return &(n->data);
+		}else if (data < n->data){
+			return get(n->leftChild, data);
+		} else if (data > n->data){
+			return get(n->rightChild, data);
+		}
 	}
-}
+
+	void clear(Node*& n) {
+		if(n != nullptr) {
+			if(n->leftChild != nullptr)
+			clear(n->leftChild);
+			if(n->rightChild != nullptr)
+			clear(n->rightChild);
+			delete n;
+			n = nullptr;
+			numNodes--;
+		}
+	}
+
+	bool remove(Node*& n, T& data) {
+		if (n == nullptr) {
+			return false;
+		} else if (n->data < data) {
+			return remove(n->rightChild, data);
+		} else if (n->data > data) {
+			return remove(n->leftChild, data);
+		} else {
+			if (n->leftChild == nullptr) {//&& n->rightChild == nullptr) {
+			Node* temp = n;
+			n = temp->rightChild;
+			delete temp;
+			numNodes--;
+			return true;
+		} else {
+			removeMax(n->leftChild, n->data);
+			numNodes--;
+			return true;
+		}
+	}
+
+	void removeMax(Node*& root_ptr, T& removed) {
+		if (root_ptr->rightChild == nullptr) {
+			Node* temp = root_ptr;
+			removed = root_ptr->data;
+			root_ptr = root_ptr->leftChild;
+			delete temp;
+		} else {
+			removeMax(root_ptr->rightChild, root_ptr->data);
+		}
+	}
+
+	bool find(Node* n, T data) {
+		// TODO (also recursive version)
+		if (n == nullptr){
+			return false;
+		} else if (data == n->data) {
+			return true;
+		} else if (data < n->data) {
+			return find(n->leftChild, data);
+		} else if (data > n->data) {
+			return find(n->rightChild, data);
+		}
+	}
 
 	void insert(Node*& n, T newData) {
 		if (n == nullptr) {
@@ -170,10 +168,10 @@ class BSTree {
 	}
 
 	void printReverseOrder(Node* n) {
-			if (n != nullptr) {
-				printInOrder(n->rightChild);
-				cout << n->data << ' ';
-				printInOrder(n->leftChild);
-			}
+		if (n != nullptr) {
+			printInOrder(n->rightChild);
+			cout << n->data << ' ';
+			printInOrder(n->leftChild);
 		}
+	}
 };
