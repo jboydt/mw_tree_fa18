@@ -15,7 +15,7 @@ using std::string;
   tree.insert(Word("cherry"));
 }*/
 
-TEST_CASE ("BSTree<int> constructor") {
+TEST_CASE (" BSTree<int> constructor") {
   BSTree<int> tree;
 
   CHECK(tree.getNumNodes() == 0);
@@ -24,20 +24,20 @@ TEST_CASE ("BSTree<int> constructor") {
   CHECK(tree.getNumNodes() == 1);
 }
 
-TEST_CASE ("BSTree<string> constructor") {
+TEST_CASE (" BSTree<string> constructor") {
   BSTree<string> tree;
 
   CHECK(tree.getNumNodes() == 0);
 
-  tree.insert("apple");
+  tree.insert(" apple");
   CHECK(tree.getNumNodes() == 1);
 
-  tree.insert("banana");
-  tree.insert("strawberry");
-  tree.insert("kiwi");
-  tree.insert("dragon fruit");
-  tree.insert("tomato");
-  tree.insert("orange");
+  tree.insert(" banana");
+  tree.insert(" strawberry");
+  tree.insert(" kiwi");
+  tree.insert(" dragon fruit");
+  tree.insert(" tomato");
+  tree.insert(" orange");
 
   tree.printInOrder();
   tree.printReverseOrder();
