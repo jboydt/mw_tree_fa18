@@ -46,9 +46,10 @@ TEST_CASE ("BSTree<string> constructor") {
   //CHECK(tree.find("grape") == false);
 }
 
-/*TEST_CASE ("Word<string> constructor") {
-  Word<string> word;
+TEST_CASE ("Word constructor") {
+  Word word;
 
-  CHECK(word.getWord() == " ");
-  CHECK(word.getCount() == 1);
-}*/
+  CHECK(word.getWord() == "");
+  CHECK(word.getCount() == 0);
+}
+
