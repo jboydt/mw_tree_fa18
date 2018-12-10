@@ -37,7 +37,16 @@ This program is a Binary search tree, MW section, Fall 2018 (Project 4). This wa
  
  
  
- | Column 1 | Column 2 | Column 3 |
+ | Function | Description |
 |----------|----------|----------|
-|   sfsdfsdf       | sdfsdfsdfsf        |     sdfsdfsdf     |
+|Clear| clear the current tree instance of contents | 
+|empty|check to see if the binary tree is empty| 
+|find|find word (string) in the tree| 
+|get|get word (string) from the tree| 
+|remove|remove word (string) from the tree| 
+ |printReverseOrder|reverse order print| 
+ |insert|insert word (string) into the tree| 
+ |getNumNodes|return the size (number of nodes) of the tree| 
+ |printInOrder|in order print| 
+
 
