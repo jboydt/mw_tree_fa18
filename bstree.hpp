@@ -169,9 +169,9 @@ class BSTree {
 
 	void printReverseOrder(Node* n) {
 		if (n != nullptr) {
-			printInOrder(n->rightChild);
+			printReverseOrder(n->rightChild);
 			cout << n->data << ' ';
-			printInOrder(n->leftChild);
+			printReverseOrder(n->leftChild);
 		}
 	}
 };
