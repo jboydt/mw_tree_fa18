@@ -33,15 +33,15 @@ class Treemaker {
 				cout << "FILE FAILED TO OPEN" << endl;
 			}
 		}
-		
+
 		// toDatatype : converts part of file input argument to the correct datatype
 		T toDatatype (string command){
 			istringstream iss(command.substr(2));
-			T usableData;
+			string usableData;
 			iss >> usableData;
-			return usableData;
+			return T(usableData);
 		}
-		
+
 		// C : delete current tree (if any) and create a new tree
 		void create (){
 			if (planter != nullptr) {
@@ -49,18 +49,18 @@ class Treemaker {
 			}
 			planter = new BSTree<T>;
 		}
-		
+
 		// D : delete tree and set planter to nullptr
 		void deleteTree (){
 			planter->clear();
 			delete planter;
 			planter = nullptr;
-			
+
 		}
-		
+
 		// input : calls functions from commands and handles outputs
 		void input (string choice) {
-			
+
 			if (choice[0] == '#' || choice.length() == 0) {
 				//ignore
 			} else if (choice[0] == 'C') {
@@ -77,11 +77,13 @@ class Treemaker {
 			} else if (choice[0] == 'I') {
 				T leaf = toDatatype(choice);
 				if (planter->find(leaf)) {
-					cout << "WORD " << leaf << " INCREMENTED" << endl;
+					T* branch = planter->get(leaf);
+					branch->incrementCount();
+					cout << "WORD " << leaf.getWord() << " INCREMENTED" << endl;
 				} else {
-					cout << "WORD " << leaf << " INSERTED" << endl;
+					planter->insert(leaf);
+					cout << "WORD " << leaf.getWord() << " INSERTED" << endl;
 				}
-				planter->insert(leaf);
 			} else if (choice[0] == 'F') {
 				T leaf = toDatatype(choice);
 				if (planter->getNumNodes() == 0) {
@@ -96,28 +98,28 @@ class Treemaker {
 				if (planter->getNumNodes() == 0) {
 					cout << "TREE EMPTY" << endl;
 				} else if (planter->remove(leaf)) {
-					cout << "REMOVED " << leaf << endl;
+					cout << "REMOVED " << leaf.getWord() << endl;
 				} else {
-					cout << leaf << " NOT FOUND" << endl;
+					cout << leaf.getWord() << " NOT FOUND" << endl;
 				}
 			} else if (choice[0] == 'G') {
 				T leaf = toDatatype(choice);
-				T* twig = planter->get(choice);
-				try{
-					cout << "GOT" << twig->getWord() << " " << twig->getCount() << endl;
-				} catch (exception e) {
+				T* twig = planter->get(leaf);
+				if (twig != nullptr) {
+					cout << "GOT " << twig->getWord() << " " << twig->getCount() << endl;
+				} else {
 					cout << "ERROR: WORD COUNT NOT FOUND" << endl;
 				}
-			} else if (choice[0] == 'N') { 
+			} else if (choice[0] == 'N') {
 				cout << "TREE SIZE IS " << planter->getNumNodes() << endl;
-			} else if (choice[0] == 'O') { 
+			} else if (choice[0] == 'O') {
 				if (planter->getNumNodes() == 0) {
 					cout << "TREE EMPTY" << endl;
 				} else {
 					planter->printInOrder();
 					cout << endl;
 				}
-			} else if (choice[0] == 'E') { 
+			} else if (choice[0] == 'E') {
 				if (planter->getNumNodes() == 0) {
 					cout << "TREE EMPTY" << endl;
 				} else {
@@ -125,20 +127,20 @@ class Treemaker {
 					cout << endl;
 				}
 			}
-			
+
 		}
-		
+
 	private:
-		
+
 		BSTree<T>* planter = nullptr;
-		
-		
-		
+
+
+
 };
 
 
 int main(int argc, char* argv[]) {
-	
+
 	if (argc != 2) {
 		cout << "PLEASE ENTER A SINGLE FILENAME" << endl;
 	} else {
