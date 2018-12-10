@@ -1,4 +1,4 @@
-![binary_tree](https://user-images.githubusercontent.com/35749270/49766263-9b3d3900-fc89-11e8-875a-235ed7454a12.png)
+![binarysearchtree](https://user-images.githubusercontent.com/35749270/49767102-1ef82500-fc8c-11e8-8854-abf01523b79e.png)
 
 # Description
 This program is a Binary search tree, MW section, Fall 2018 (Project 4). This was a collaboration from all the students in the Butte College CSCI 21 class in the Fall of 2018.
