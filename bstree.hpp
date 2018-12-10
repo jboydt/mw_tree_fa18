@@ -115,10 +115,11 @@ class BSTree {
 			delete temp;
 			numNodes--;
 			return true;
-		} else {
-			removeMax(n->leftChild, n->data);
-			numNodes--;
-			return true;
+			} else {
+				removeMax(n->leftChild, n->data);
+				numNodes--;
+				return true;
+			}
 		}
 	}
 
