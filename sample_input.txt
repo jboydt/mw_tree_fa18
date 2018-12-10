@@ -1,0 +1,174 @@
+# non-existent tree
+X
+D
+I apple
+F apple
+R apple
+G apple
+N
+O
+E
+# single node tree
+C
+N
+O
+E
+I apple
+I apple
+I apple
+I apple
+I apple
+I apple
+O
+E
+F apple
+G apple
+N
+R apple
+N
+O
+E
+X
+O
+E
+D
+# big tree
+C
+I mango
+I coconut
+I peach
+I banana
+I strawberry
+I guava
+I fig
+I lemon
+N
+O
+E
+I mango
+I coconut
+I peach
+I banana
+I strawberry
+I guava
+I fig
+I lemon
+N
+O
+E
+I mango
+I coconut
+I peach
+I banana
+I strawberry
+I guava
+I fig
+I lemon
+I mango
+I coconut
+I peach
+I banana
+I strawberry
+I guava
+I fig
+I lemon
+I mango
+I coconut
+I peach
+I banana
+I strawberry
+I guava
+I fig
+I lemon
+N
+O
+E
+I coconut
+I peach
+I strawberry
+I guava
+I lemon
+N
+O
+E
+F mango
+F coconut
+F peach
+F banana
+F strawberry
+F guava
+F fig
+F lemon
+F apple
+G mango
+G coconut
+G peach
+G banana
+G strawberry
+G guava
+G fig
+G lemon
+G apple
+R mango
+N
+O
+E
+F mango
+G mango
+R coconut
+N
+O
+E
+F coconut
+G coconut
+R banana
+N
+O
+E
+F banana
+G banana
+R strawberry
+N
+O
+E
+F strawberry
+G strawberry
+R guava
+N
+O
+E
+F guava
+G guava
+R lemon
+N
+O
+E
+F lemon
+G lemon
+R fig
+N
+O
+E
+F fig
+G fig
+R peach
+N
+O
+E
+F peach
+G peach
+X
+N
+O
+E
+D
+# non-existent tree again
+X
+D
+I apple
+F apple
+R apple
+G apple
+N
+O
+E
