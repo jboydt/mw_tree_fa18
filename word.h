@@ -12,7 +12,7 @@ public:
   Word();
   Word(string newWord);
 
-  
+
   // getters and setters
   string getWord();
   unsigned int getCount();
@@ -33,7 +33,7 @@ public:
   friend ostream& operator<<(ostream& outs, const Word& w);
 
   // operator>>
-  friend istream& operator>>(istream& ins, Word& w);
+//  friend istream& operator>>(istream& ins, Word& w);
 
 private:
   string word;
