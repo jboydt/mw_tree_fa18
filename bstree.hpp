@@ -128,7 +128,7 @@ class BSTree {
   }
 
   void removeMax(Node*& root_ptr, T& removed) {
-    if (root_ptr->rightChild = nullptr) {
+    if (root_ptr->rightChild == nullptr) {
       Node* temp = root_ptr;
       removed = root_ptr->data;
       root_ptr = root_ptr->leftChild;
