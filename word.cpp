@@ -34,33 +34,33 @@ void Word ::incrementCount(unsigned int amount)
 
 bool Word ::operator> (const Word& otherWord)
 {
-	return this -> word > otherWord.word;
+	return uppercase(this -> word) > uppercase(otherWord.word);
 }
 
 bool Word ::operator< (const Word& otherWord)
 {
-	return this -> word < otherWord.word;
+	return uppercase(this -> word) < uppercase(otherWord.word);
 }
 
 bool Word ::operator==(const Word& otherWord)
 {
-	return this -> word == otherWord.word;
+	return uppercase(this -> word) == uppercase(otherWord.word);
 }
 
 ostream& operator<<(ostream& outs, const Word& w)
 {
 
-	outs << w.word;
+	outs << w.word << ' ' << w.count;
 	return outs;
 }
-
+/*
 istream& operator>>(istream& ins, Word& w)
 {
 
 	getline(ins, w.word);
 	return ins;
 }
-
+*/
 string Word::uppercase(string s)
 {
   transform(s.begin(), s.end(),  s.begin(), ::toupper);
