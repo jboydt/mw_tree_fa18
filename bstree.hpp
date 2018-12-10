@@ -42,7 +42,7 @@ class BSTree {
   		return remove(root, data);
   	}
 	
-	void removeMax() {
+	void removeMax(T data) {
 		return remove(root, data);
 	}
 
