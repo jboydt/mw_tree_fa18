@@ -89,9 +89,9 @@ class Treemaker {
 				if (planter->getNumNodes() == 0) {
 					cout << "TREE EMPTY" << endl;
 				} else if (planter->find(leaf)) {
-					cout << "FOUND " << leaf << endl;
+					cout << "FOUND " << leaf.getWord() << endl;
 				} else {
-					cout << leaf << " NOT FOUND" << endl;
+					cout << leaf.getWord() << " NOT FOUND" << endl;
 				}
 			} else if (choice[0] == 'R') {
 				T leaf = toDatatype(choice);
