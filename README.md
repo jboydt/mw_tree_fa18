@@ -30,5 +30,6 @@ This program is a Binary search tree, MW section, Fall 2018 (Project 4). This wa
 
 *Thor, Ger . 
 
-*Williams, Andrea E.  ```
+*Williams, Andrea E.
+ ```
 
