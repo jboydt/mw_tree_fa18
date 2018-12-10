@@ -172,7 +172,7 @@ class BSTree {
 	void printInOrder(Node* n) {
 		if (n != nullptr) {
 			printInOrder(n->leftChild);
-			cout << n->data << ' ' << endl;
+			cout << n->data << ' ';
 			printInOrder(n->rightChild);
 		}
 	}
@@ -180,7 +180,7 @@ class BSTree {
 	void printReverseOrder(Node* n) {
 			if (n != nullptr) {
 				printInOrder(n->rightChild);
-				cout << n->data << ' ' << endl;
+				cout << n->data << ' ';
 				printInOrder(n->leftChild);
 			}
 		}
