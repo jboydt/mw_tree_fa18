@@ -117,14 +117,14 @@ class Treemaker {
 					cout << "TREE EMPTY" << endl;
 				} else {
 					planter->printInOrder();
-					cout << endl;
+
 				}
 			} else if (choice[0] == 'E') {
 				if (planter->getNumNodes() == 0) {
 					cout << "TREE EMPTY" << endl;
 				} else {
 					planter->printReverseOrder();
-					cout << endl;
+					
 				}
 			}
 

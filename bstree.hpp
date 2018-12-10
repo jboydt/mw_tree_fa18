@@ -87,6 +87,7 @@ class BSTree {
 		} else if (data > n->data){
 			return get(n->rightChild, data);
 		}
+    return nullptr;
 	}
 
 	void clear(Node*& n) {
@@ -145,6 +146,7 @@ class BSTree {
 		} else if (data > n->data) {
 			return find(n->rightChild, data);
 		}
+    return false;
 	}
 
 	void insert(Node*& n, T newData) {
@@ -163,7 +165,7 @@ class BSTree {
 	void printInOrder(Node* n) {
 		if (n != nullptr) {
 			printInOrder(n->leftChild);
-			cout << n->data << ' ';
+			cout << n->data << ' ' << endl;
 			printInOrder(n->rightChild);
 		}
 	}
@@ -171,7 +173,7 @@ class BSTree {
 	void printReverseOrder(Node* n) {
 		if (n != nullptr) {
 			printReverseOrder(n->rightChild);
-			cout << n->data << ' ';
+			cout << n->data << ' ' << endl;
 			printReverseOrder(n->leftChild);
 		}
 	}
