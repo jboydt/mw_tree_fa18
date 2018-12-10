@@ -1,8 +1,10 @@
-# mw_tree_fa18
+# Description
 Binary search tree, MW section, Fall 2018 (Project 4).
 
-# contributors
-Billheimer, Kyle M.
+This program is a Binary search tree, MW section, Fall 2018 (Project 4). This was a collaboration from all the students in the Butte College CSCI 21 class in the Fall of 2018.
+
+# Contributors:
+`Billheimer, Kyle M.
 Bird, Madeline M.
 Brashear, Charles A.
 Collis, Negus K.
@@ -16,4 +18,4 @@ Hurlimann, Kaden R.
 Orozco, Daniel
 Swaffer, Bethany E.
 Thor, Ger
-Williams, Andrea E.
+Williams, Andrea E.`
