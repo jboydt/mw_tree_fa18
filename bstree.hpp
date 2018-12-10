@@ -4,6 +4,7 @@
 #include <string>
 using std::cout;
 using std::string;
+using std::endl;
 
 template <class T>
 class BSTree {
@@ -41,7 +42,7 @@ class BSTree {
   	bool remove(T data) {
   		return remove(root, data);
   	}
-	
+
 	void removeMax(T data) {
 		return remove(root, data);
 	}
@@ -88,7 +89,7 @@ class BSTree {
      return get(n->rightChild, data);
    }
   }
-  
+
   void clear(Node*& n) {
     if(n != nullptr) {
       if(n->leftChild != nullptr)
@@ -112,23 +113,27 @@ class BSTree {
       if (n->leftChild == nullptr && n->rightChild == nullptr) {
         n = nullptr;
         delete n;
+        numNodes--;
         return true;
       } else if (n->leftChild == nullptr) {
         Node* temp = n;
         n = temp->rightChild;
         delete temp;
+        numNodes--;
         return true;
       } else if (n->rightChild == nullptr) {
         removeMax(n->leftChild, n->data);
+        numNodes--;
         return true;
       } else {
+        numNodes--;
         return true;
       }
     }
   }
 
   void removeMax(Node*& root_ptr, T& removed) {
-    if (root_ptr->rightChild == nullptr) {
+    if (root_ptr->rightChild = nullptr) {
       Node* temp = root_ptr;
       removed = root_ptr->data;
       root_ptr = root_ptr->leftChild;
@@ -167,7 +172,7 @@ class BSTree {
 	void printInOrder(Node* n) {
 		if (n != nullptr) {
 			printInOrder(n->leftChild);
-			cout << n->data << ' ' << numNodes;
+			cout << n->data << ' ' << endl;
 			printInOrder(n->rightChild);
 		}
 	}
@@ -175,7 +180,7 @@ class BSTree {
 	void printReverseOrder(Node* n) {
 			if (n != nullptr) {
 				printInOrder(n->rightChild);
-				cout << n->data << ' ' << numNodes;
+				cout << n->data << ' ' << endl;
 				printInOrder(n->leftChild);
 			}
 		}
