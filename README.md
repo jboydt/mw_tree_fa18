@@ -38,7 +38,7 @@ This program is a Binary search tree, MW section, Fall 2018 (Project 4). This wa
  
  
  | Function | Description |
-|----------|----------|----------|
+|----------|----------|
 |Clear| clear the current tree instance of contents | 
 |empty|check to see if the binary tree is empty| 
 |find|find word (string) in the tree| 
