@@ -1,40 +1,38 @@
 ![binarysearchtree](https://user-images.githubusercontent.com/35749270/49767102-1ef82500-fc8c-11e8-8854-abf01523b79e.png)
 
-# Description
+# Description:
 This program is a Binary search tree, MW section, Fall 2018 (Project 4). This was a collaboration from all the students in the Butte College CSCI 21 class in the Fall of 2018.
 
 # Contributors:
-*Billheimer, Kyle M. 
+* Billheimer, Kyle M. 
 
-*Bird, Madeline M.  
+* Bird, Madeline M.  
 
-*Brashear, Charles A.  
+* Brashear, Charles A.  
 
-*Collis, Negus K.  
+* Collis, Negus K.  
 
-*Estey, Matthew R.  
+* Estey, Matthew R.  
 
-*Farrar, Michael K.  
+* Farrar, Michael K.  
 
-*Frank, Alexander E.  
+* Frank, Alexander E.  
 
-*Gilland, Kyle C.  
+* Gilland, Kyle C.  
 
-*Gobert, Jarod R.  
+* Gobert, Jarod R.  
 
-*Gray, Patrick L.  
+* Gray, Patrick L.  
 
-*Hurlimann, Kaden R.  
+* Hurlimann, Kaden R.  
 
-*Orozco, Daniel.  
+* Orozco, Daniel.  
 
-*Swaffer, Bethany E.  
+* Swaffer, Bethany E.  
 
-*Thor, Ger . 
+* Thor, Ger . 
 
-*Williams, Andrea E.
- ```
- 
+* Williams, Andrea E.
  
  
  | Function | Description |
