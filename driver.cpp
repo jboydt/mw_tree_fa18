@@ -103,12 +103,17 @@ class Treemaker {
 					cout << leaf.getWord() << " NOT FOUND" << endl;
 				}
 			} else if (choice[0] == 'G') {
-				T leaf = toDatatype(choice);
-				T* twig = planter->get(leaf);
-				if (twig != nullptr) {
-					cout << "GOT " << twig->getWord() << " " << twig->getCount() << endl;
+				if (planter->empty() == true){
+					cout << "TREE EMPTY" << endl;
 				} else {
-					cout << "ERROR: WORD COUNT NOT FOUND" << endl;
+					T leaf = toDatatype(choice);
+					T* twig = planter->get(leaf);
+					if (twig != nullptr) {
+						cout << "GOT " << twig->getWord() 
+						<< " " << twig->getCount() << endl;
+					} else {
+						cout << leaf.getWord() << " NOT FOUND" << endl;
+					}
 				}
 			} else if (choice[0] == 'N') {
 				cout << "TREE SIZE IS " << planter->getNumNodes() << endl;
