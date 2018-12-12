@@ -50,7 +50,7 @@ bool Word ::operator==(const Word& otherWord)
 ostream& operator<<(ostream& outs, const Word& w)
 {
 
-	outs << w.word << ':' << w.count;
+	outs << w.word << ' ' << w.count;
 	return outs;
 }
 /*
